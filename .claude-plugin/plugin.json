@@ -1,0 +1,17 @@
+{
+  "name": "skills-hub",
+  "displayName": "Skills Hub",
+  "version": "0.2.0",
+  "description": "Search, inspect, and install AI coding skills from skills-hub.ai, the open registry of SKILL.md skills for Claude Code and other agents.",
+  "author": {
+    "name": "Team Bearie LLC",
+    "url": "https://skills-hub.ai"
+  },
+  "homepage": "https://skills-hub.ai",
+  "repository": "https://github.com/tinh2/skills-hub-claude-plugin",
+  "license": "MIT",
+  "keywords": ["skills", "skill-md", "agent-skills", "registry", "mcp", "developer-tools"],
+  "icon": "./.claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://skills-hub.ai/privacy",
+  "termsOfServiceUrl": "https://skills-hub.ai/terms"
+}
