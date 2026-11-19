@@ -15,6 +15,24 @@ claude plugin marketplace add anthropics/claude-plugins-community
 claude plugin install skills-hub@claude-community
 ```
 
+### Any agent with the skills CLI or GitHub CLI
+
+To install only the `find-skills` skill (no slash commands or MCP config) into Claude Code, Cursor, Codex, OpenCode, and other agents, use Vercel's [skills CLI](https://github.com/vercel-labs/skills):
+
+```bash
+npx skills add tinh2/skills-hub-claude-plugin
+```
+
+Or the [GitHub CLI](https://cli.github.com) (v2.90.0 or later, `gh skill` is in public preview):
+
+```bash
+gh skill install tinh2/skills-hub-claude-plugin find-skills
+# target one agent, for example Claude Code:
+gh skill install tinh2/skills-hub-claude-plugin find-skills --agent claude-code
+```
+
+The skill calls the skills-hub.ai MCP tools when they are connected. Without them, add the MCP server at `https://api.skills-hub.ai/mcp`, or install a result with `npx @skills-hub-ai/cli install <slug>`.
+
 ### Cursor and other Agent Plugins clients
 
 This repo is also an [Agent Plugins](https://agent-plugins.org) 1.0.0 plugin (`plugin.json` and `mcp.json` at the root), so clients that support the standard, such as Cursor, get the `find-skills` skill and the remote MCP server. The slash commands below are Claude Code only.
