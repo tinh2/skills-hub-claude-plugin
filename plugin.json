@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "skills-hub",
+  "version": "0.2.0",
+  "description": "Search, inspect, and install AI coding skills from skills-hub.ai, the open registry of 15,000+ SKILL.md skills for Cursor, Claude Code, and other agents.",
+  "author": {
+    "name": "Team Bearie LLC",
+    "url": "https://skills-hub.ai"
+  },
+  "homepage": "https://skills-hub.ai",
+  "repository": "https://github.com/tinh2/skills-hub-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "skill-md",
+    "agent-skills",
+    "registry",
+    "mcp",
+    "developer-tools"
+  ]
+}

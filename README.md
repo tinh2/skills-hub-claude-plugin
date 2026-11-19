@@ -15,14 +15,18 @@ claude plugin marketplace add anthropics/claude-plugins-community
 claude plugin install skills-hub@claude-community
 ```
 
+### Cursor and other Agent Plugins clients
+
+This repo is also an [Agent Plugins](https://agent-plugins.org) 1.0.0 plugin (`plugin.json` and `mcp.json` at the root), so clients that support the standard, such as Cursor, get the `find-skills` skill and the remote MCP server. The slash commands below are Claude Code only.
+
 ## What you get
 
-| Command | What it does |
-| --- | --- |
-| `/skills-hub:search <query>` | Search the registry and show the 10 best matches |
-| `/skills-hub:install <slug>` | Show a skill's details, ask you to confirm, then install it into `.claude/skills/<slug>/` |
-| `/skills-hub:browse [category]` | Link to the catalog on skills-hub.ai and list its most popular skills |
-| `/skills-hub:recent` | List the 10 most recently published skills |
+| Command                         | What it does                                                                              |
+| ------------------------------- | ----------------------------------------------------------------------------------------- |
+| `/skills-hub:search <query>`    | Search the registry and show the 10 best matches                                          |
+| `/skills-hub:install <slug>`    | Show a skill's details, ask you to confirm, then install it into `.claude/skills/<slug>/` |
+| `/skills-hub:browse [category]` | Link to the catalog on skills-hub.ai and list its most popular skills                     |
+| `/skills-hub:recent`            | List the 10 most recently published skills                                                |
 
 The plugin also includes a `find-skills` skill, so Claude can suggest an existing skill when you ask whether one exists for a task.
 
