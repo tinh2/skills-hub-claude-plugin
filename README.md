@@ -48,6 +48,23 @@ This repo is also an [Agent Plugins](https://agent-plugins.org) 1.0.0 plugin (`p
 
 The plugin also includes a `find-skills` skill, so Claude can suggest an existing skill when you ask whether one exists for a task.
 
+## Example prompts
+
+Once the plugin is installed you can just ask Claude in plain language:
+
+- "Is there a skill for reviewing database migrations?"
+- "Find me a skill that writes Playwright tests, and show me the top three."
+- "What does the `code-review` skill actually do before I install it?"
+- "Install the best Terraform skill for this repo."
+
+Or use the slash commands directly, for example `/skills-hub:search security audit` then `/skills-hub:install <slug>`.
+
+## Troubleshooting
+
+- **Claude doesn't use the skills-hub tools:** run `/mcp` and check that `skills-hub` is connected. If it isn't, add it with `claude mcp add --transport http skills-hub https://api.skills-hub.ai/mcp`.
+- **Install fails with an npm error:** the install command needs Node.js 18 or later on your PATH (`node -v`).
+- **A skill didn't show up after install:** skills land in `.claude/skills/<slug>/` of the folder you ran Claude from. Restart Claude Code, or start a new session, so it picks up the new skill.
+
 ## What it runs, sends, and fetches
 
 - **MCP server:** the plugin connects Claude to the skills-hub.ai remote MCP server at `https://api.skills-hub.ai/mcp` (HTTPS, no account or API key). Its tools are `search_skills`, `get_skill_detail`, `list_installed_skills` (browses the public catalog), and `install_skill` (records an install count on skills-hub.ai, writes no files). Your search queries and the slugs you look up are sent to skills-hub.ai.
